@@ -115,14 +115,14 @@ video{
 }
 .fixed-right{
   width: 120rpx;
-  height: 560rpx;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   position: fixed;
   right: 22.5rpx;
-  bottom: 360rpx;
+  bottom: 0;
 }
 .fixed-item{
   width: 100%;
@@ -134,6 +134,7 @@ video{
   text-align: center;
   color: #f9f9f9;
   font-size: 28rpx;
+  margin-bottom: 30rpx;
   font-weight: 500;
 }
 .hong{
@@ -156,6 +157,7 @@ video{
   height: 140rpx;
   position: relative;
   overflow: auto!important;
+  margin-bottom: 30rpx;
 }
 .avator{
   width: 100rpx;
