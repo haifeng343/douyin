@@ -1,0 +1,3 @@
+<view class="imgList">
+  <image src="{{item}}" wx:for="{{list}}" wx:key="index" mode="widthFix"></image>
+</view>

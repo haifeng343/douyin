@@ -43,13 +43,49 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"gamePlugin": {
 			"current": -1,
 			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "城市",
+					"pathName": "pages/city/city",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "信息",
+					"pathName": "pages/msg/msg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/my/my",
+					"scene": null
+				}
+			]
 		}
 	}
 }

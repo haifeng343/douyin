@@ -1,0 +1,14 @@
+/* pages/my/my.wxss */
+swiper{
+  width: 100%;
+  height: 500rpx;
+}
+swiper-item{
+  width: 100%;
+  height: 100%;
+}
+.img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

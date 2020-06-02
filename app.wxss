@@ -8,3 +8,15 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.imgList{
+  width:100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.imgList image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

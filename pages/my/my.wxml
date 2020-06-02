@@ -1,0 +1,9 @@
+<swiper indicator-dots="{{true}}" indicator-active-color="#000" circular="true">
+  <swiper-item wx:for="{{list}}" wx:key="index">
+    <image src="{{item}}" class="img" mode="widthFix"></image>
+  </swiper-item>
+</swiper>
+
+<view class="imgList">
+  <image src="{{item}}" wx:for="{{list}}" wx:key="index" mode="widthFix"></image>
+</view>

@@ -1,0 +1,16 @@
+<scroll-view scroll-y="true" class="list">
+	<view class="item" wx:for="{{chatList}}" wx:key="index">
+		<view class="item1" wx:if="{{item.id%2==1}}">
+			<image src="{{chatImg}}" class="chatImg"></image>
+			<view class="chatTxt">
+				{{item.text}}
+			</view>
+		</view>
+		<view class="item2" wx:else>
+			<view class="chatTxt">
+				{{item.text}}
+			</view>
+			<image src="{{userImg}}" class="chatImg"></image>
+		</view>
+	</view>
+</scroll-view>

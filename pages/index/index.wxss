@@ -10,6 +10,7 @@ swiper-item{
   height: 100%;
   background: #000!important;
   position: relative;
+  -webkit-overflow-scrolling:touch
 }
 video{
   width: 100%;
@@ -182,7 +183,7 @@ video{
 }
 .footer-music{
   position: fixed;
-  bottom: 140rpx;
+  top: 80%;
   right: 22.5rpx;
   width: 130rpx;
   height: 130rpx;
@@ -205,7 +206,31 @@ video{
   width: 56rpx;
   height: 56rpx;
 }
-
-
-
+.title{
+  position: fixed;
+  top: 79%;
+  width: 76%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  font-size: 30rpx;
+  left: 3%;
+}
+.dec{
+  position: fixed;
+  top: 82%;
+  width: 60%;
+  height: auto;
+  max-height: 96rpx;
+  white-space: pre-wrap;
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+  font-size: 28rpx;
+  left: 3%;
+  text-overflow: ellipsis;
+}
+.dialog{
+  position: fixed;
+}
 

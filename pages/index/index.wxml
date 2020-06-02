@@ -1,7 +1,7 @@
 
   <!-- 头部内容 -->
   <cover-view class="fixed-top" style="top:{{statusBarHeight}}px">
-  <cover-image src="../image/bo.png" class="bo"></cover-image>
+  <cover-image src="../image/bo.png" bindtap="photoTell" class="bo"></cover-image>
     <cover-view class="fixed-txt">
     <cover-view class="count">55</cover-view>
       <cover-view class="fixed-txt1 {{show==1?'active':''}}" data-show="{{1}}" catchtap="changeTop">关注</cover-view>
@@ -10,13 +10,12 @@
     <cover-view></cover-view>
   <!-- <cover-image src="../image/search.png" class="bo"></cover-image> -->
   </cover-view>
-<swiper autoplay="{{false}}" vertical="true" bindchange="swiperChange" bindanimationfinish="swiperFinish" current="{{current}}" style="width:{{windowWidth}}px;height:{{windowHeight}}px;">
+<swiper autoplay="{{item.flag}}" vertical="true" bindchange="swiperChange" bindanimationfinish="swiperFinish" current="{{current}}" style="width:{{windowWidth}}px;height:{{windowHeight}}px;">
 	<swiper-item wx:for="{{videoList}}" wx:key="index">
 		<video autoplay="{{item.flag}}" id="v{{index}}" controls="{{true}}" loop="true" enable-play-gesture="true" show-center-play-btn="true" duration="{{item.duration}}" enable-progress-gesture="true" auto-pause-if-navigate="true" play-btn-position="center" auto-pause-if-open-native="true" src="{{item.url}}"></video>
 
   <!-- 右侧操作栏 -->
-  <cover-view class="fixed-right">
-
+  <cover-view class="fixed-right" wx:if="{{item.flag}}">
   <!-- 作者头像 -->
   <cover-view class="poster">
     <cover-image src="{{item.img}}" class="avator"></cover-image>
@@ -28,22 +27,24 @@
       <cover-view>{{item.value}}</cover-view>
     </cover-view>
   </cover-view>
+  <!-- 标题 文案 -->
+  <cover-view wx:if="{{item.flag}}" class="title">{{item.title}}</cover-view>
+  <cover-view wx:if="{{item.flag}}" class="dec">{{item.dec}}</cover-view>
 	</swiper-item>
 </swiper>
 
 
-
   <!-- 底部导航 -->
   <cover-view class="fixed-bottom" style="margin-bottom:{{btuBottom?btuBottom:0}}">
-    <cover-view class="fixed-bot">首页</cover-view>
-    <cover-view class="fixed-bot">重庆</cover-view>
-    <cover-view class="fixed-bot bindAdd">+</cover-view>
-    <cover-view class="fixed-bot">信息</cover-view>
-    <cover-view class="count count1">99+</cover-view>
-    <cover-view class="fixed-bot">我的</cover-view>
+    <cover-view class="fixed-bot" bindtap="goToindex">首页</cover-view>
+    <cover-view class="fixed-bot" bindtap="goCity">重庆</cover-view>
+    <cover-view class="fixed-bot bindAdd" bindtap="photoTell">+</cover-view>
+    <cover-view class="fixed-bot" bindtap="goMsg">信息</cover-view>
+    <cover-view class="count count1" wx:if="{{!isCount}}">99+</cover-view>
+    <cover-view class="fixed-bot" bindtap="goMy">我的</cover-view>
   </cover-view>
   <cover-view class="footer"></cover-view>
-  <cover-view class="footer-music" animation="{{animation}}">
+  <cover-view class="footer-music">
     <cover-view class="music-father">
       <cover-image src="../image/music.png" class="music"></cover-image>
     </cover-view>
